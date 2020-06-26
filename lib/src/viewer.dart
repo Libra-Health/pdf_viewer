@@ -35,7 +35,7 @@ class PDFViewer extends StatefulWidget {
       @required this.document,
       this.scrollDirection,
       this.lazyLoad = true,
-      this.indicatorText = Colors.deepOrangeAccent,
+      this.indicatorText = Colors.white,
       this.indicatorBackground = Colors.black54,
       this.showIndicator = true,
       this.showPicker = true,
@@ -219,11 +219,13 @@ class _PDFViewerState extends State<PDFViewer> {
       ),
       floatingActionButton: widget.showPicker && widget.document.count > 1
           ? FloatingActionButton(
+            backgroundColor:Colors.deepOrangeAccent,
+
               elevation: 4.0,
               tooltip: widget.tooltip.jump,
               child: Icon(
                 Icons.view_carousel,
-                color: Colors.deepOrangeAccent,
+                color: Colors.white,
               ),
               onPressed: () {
                 _pickPage();
