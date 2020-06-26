@@ -35,7 +35,7 @@ class PDFViewer extends StatefulWidget {
       @required this.document,
       this.scrollDirection,
       this.lazyLoad = true,
-      this.indicatorText = Theme.of(context).primaryColor,
+      this.indicatorText = Colors.deepOrangeAccent,
       this.indicatorBackground = Colors.black54,
       this.showIndicator = true,
       this.showPicker = true,
@@ -207,7 +207,7 @@ class _PDFViewerState extends State<PDFViewer> {
                 ? Center(
                     child: CircularProgressIndicator(
                       valueColor: new AlwaysStoppedAnimation<Color>(
-                          Theme.of(context).primaryColor),
+                          Colors.deepOrangeAccent),
                     ),
                   )
                 : _pages[index],
@@ -223,7 +223,7 @@ class _PDFViewerState extends State<PDFViewer> {
               tooltip: widget.tooltip.jump,
               child: Icon(
                 Icons.view_carousel,
-                color: Theme.of(context).primaryColor,
+                color: Colors.deepOrangeAccent,
               ),
               onPressed: () {
                 _pickPage();
